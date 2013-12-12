@@ -7,8 +7,30 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
+		<div class="masthead">
+	        <h3><a href="http://ziyue.tv">子曰视频</a> (后台) 
+	        	<small class="pull-right">
+					nickname
+	        	</small>
+	        </h3>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li><%= link_to "课程", controller: "courses" %></li>
+						<li><a href="#">用户</a></li>
+					</ul>
+				</div>
+			</nav>
+			
+		</div>
 
 <%= yield %>
 
+		<div class="clear"></div>
+		<div id="footer" style="text-align: center;margin: 40px 0;">
+			Copyright &copy; by ZIYUE.TV. All Rights Reserved.<br/>
+		</div><!-- footer -->
+	</div><!-- container -->
 </body>
 </html>
