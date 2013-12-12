@@ -1,0 +1,20 @@
+<table class="table">
+	<tr>
+		<td>分类</td>
+		<td>课程</td>
+		<td>字幕</td>
+		<td>状态</td>
+		<td>链接检测</td>
+		<td></td>
+	</tr>
+<% @courses.each do |course| %>
+	<tr>
+		<td><%= course.cat %></td>
+		<td><%= course.title %></td>
+		<td><%= %></td>
+		<td><%= course.on_sale %></td>
+		<td><%= %></td>
+	</tr>
+<% end %>
+</table>	
+		
