@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Admin::Application.config.secret_key_base = '6abd16578f065f8980fa836bb778c8686106d04ab80ce62ed378645b39b3dfb7f35f2310de0a1932d6e0a0937cfe4d5fda65b9363d43a63d7800cdb38d1695c6'
+Admin::Application.config.secret_key_base = '00481626745b1e502580a47d397390773199f95533de6611229d71d25582df598f9ffdf34e4a8d7a4a5f683b63c6c1715e87e6e07c75d55bc246c8aa13eca354'
