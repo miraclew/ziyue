@@ -1,7 +1,7 @@
 class CoursesController < ApplicationController
   def index
     @page_title = "课程列表"
-    @courses = Course.skip().limit(10).all()
+    @courses = Course.page(params[:page]).per(20)
     
     respond_to do |format|
       format.html
