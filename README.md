@@ -1,4 +1,7 @@
 ziyue
 =====
 
-ziyue.tv is a MOOC application (port from php)
+ziyue.tv is a MOOC application written in Ruby on Rails (port from php)
+
+Online version: http://ziyue.tv
+
