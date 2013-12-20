@@ -1,0 +1,376 @@
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-20 13:05:37 +0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1.3ms)
+ERROR: compiling _app_views_layouts_application_html_erb___3869158535372840432_70236635974580 RAISED /private/tmp/x/ziyue/app/views/layouts/application.html.erb:13: syntax error, unexpected ')'
+... '订阅每周教程更新',  );@output_buffer.safe_append='...
+...                               ^
+/private/tmp/x/ziyue/app/views/layouts/application.html.erb:36: syntax error, unexpected keyword_ensure, expecting ')'
+/private/tmp/x/ziyue/app/views/layouts/application.html.erb:38: syntax error, unexpected keyword_end, expecting ')'
+Function body:           def _app_views_layouts_application_html_erb___3869158535372840432_70236635974580(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.safe_append='<!DOCTYPE html>
+<html>
+<head>
+  <title>';@output_buffer.append=( t 'application.title' );@output_buffer.safe_append='</title>
+  ';@output_buffer.append=( stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true );@output_buffer.safe_append='
+  ';@output_buffer.append=( javascript_include_tag "application", "data-turbolinks-track" => true );@output_buffer.safe_append='
+  ';@output_buffer.append=( csrf_meta_tags );@output_buffer.safe_append='
+</head>
+<body>
+	<div class="container">
+		<div class="masthead">
+	        <h3><a href="http://ziyue.tv">';@output_buffer.append=( t 'application.title' );@output_buffer.safe_append='</a>
+	        	<small>';@output_buffer.append=( link_to '订阅每周教程更新',  );@output_buffer.safe_append='</small>
+	        </h3>
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<ul class="nav navbar-nav">
+						<li>';@output_buffer.append=( link_to "课程", controller: "courses" );@output_buffer.safe_append='</li>
+						<li>';@output_buffer.append=( link_to "用户", controller: "users" );@output_buffer.safe_append='</li>
+					</ul>
+				</div>
+			</nav>
+			
+		</div>
+
+		';@output_buffer.append=( yield );@output_buffer.safe_append='
+
+		<div class="clear"></div>
+		<div id="footer" style="text-align: center;margin: 40px 0;">
+			Copyright &copy; by ZIYUE.TV. All Rights Reserved.<br/>
+		</div><!-- footer -->
+	</div><!-- container -->
+</body>
+</html>
+';@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+
+Backtrace: /Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `module_eval'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/template.rb:299:in `compile'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/template.rb:248:in `block in compile!'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `synchronize'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/template.rb:236:in `compile!'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/template.rb:142:in `block in render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/notifications.rb:161:in `instrument'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/template.rb:141:in `render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:61:in `render_with_layout'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:47:in `render_template'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/renderer/template_renderer.rb:17:in `render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:42:in `render_template'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_view/renderer/renderer.rb:23:in `render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:127:in `_render_template'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/streaming.rb:219:in `_render_template'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:120:in `render_to_body'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:33:in `render_to_body'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/renderers.rb:26:in `render_to_body'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:97:in `render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block (2 levels) in render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+/Users/aaaa/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/benchmark.rb:296:in `realtime'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/core_ext/benchmark.rb:12:in `ms'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:41:in `block in render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:84:in `cleanup_view_runtime'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:189:in `process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:403:in `_run__3772584127669946576__process_action__callbacks'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/rescue.rb:29:in `process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:31:in `block in process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `block in instrument'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/notifications.rb:159:in `instrument'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/base.rb:136:in `process'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/abstract_controller/rendering.rb:44:in `process'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal.rb:195:in `dispatch'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_controller/metal.rb:231:in `block in action'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:80:in `dispatch'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:48:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:71:in `block in call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `each'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/journey/router.rb:59:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/routing/route_set.rb:680:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/etag.rb:23:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/conditionalget.rb:25:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/head.rb:11:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/flash.rb:241:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:225:in `context'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/session/abstract/id.rb:220:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/cookies.rb:486:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:373:in `_run__552012647803501644__call__callbacks'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/callbacks.rb:80:in `run_callbacks'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/reloader.rb:64:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.2/lib/rails/rack/logger.rb:38:in `call_app'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `block in call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `block in tagged'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:25:in `tagged'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/tagged_logging.rb:67:in `tagged'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.2/lib/rails/rack/logger.rb:20:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/request_id.rb:21:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/methodoverride.rb:21:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/runtime.rb:17:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/activesupport-4.0.2/lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/lock.rb:17:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/static.rb:64:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/sendfile.rb:112:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.2/lib/rails/engine.rb:511:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/railties-4.0.2/lib/rails/application.rb:97:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/rack-1.5.2/lib/rack/content_length.rb:14:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.7.1/lib/puma/server.rb:486:in `handle_request'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.7.1/lib/puma/server.rb:357:in `process_client'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.7.1/lib/puma/server.rb:250:in `block in run'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.7.1/lib/puma/thread_pool.rb:92:in `call'
+/Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/puma-2.7.1/lib/puma/thread_pool.rb:92:in `block in spawn_thread'
+Completed 500 Internal Server Error in 37ms
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-20 13:07:05 +0800
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 2586ms (Views: 2585.6ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/courses.css?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-20 13:07:08 +0800
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:07:13 +0800
+Processing by CoursesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.0810ms
+  MOPED: Retrying connection attempt 1 more time(s). runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.1470ms
+  Rendered courses/index.html.erb within layouts/application (256.1ms)
+Completed 500 Internal Server Error in 284ms
+
+ActionView::Template::Error (Could not connect to a primary node for replica set #<Moped::Cluster:70236643943660 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+     7: 		<td>链接检测</td>
+     8: 		<td></td>
+     9: 	</tr>
+    10: <% @courses.each do |course| %>
+    11: 	<tr>
+    12: 		<td><%= course.cat %></td>
+    13: 		<td><%= course.title %></td>
+  app/views/courses/index.html.erb:10:in `_app_views_courses_index_html_erb___2731790002021938106_70236644032160'
+  app/controllers/courses_controller.rb:6:in `index'
+
+
+  Rendered /Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+  Rendered /Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+  Rendered /Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.5ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:07:13 +0800
+Processing by CoursesController#index as HTML
+  MOPED: Retrying connection attempt 1 more time(s). runtime: n/a
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 1.2420ms
+  Rendered courses/index.html.erb within layouts/application (254.0ms)
+Completed 500 Internal Server Error in 257ms
+
+ActionView::Template::Error (Could not connect to a primary node for replica set #<Moped::Cluster:70236643943660 @seeds=[<Moped::Node resolved_address="127.0.0.1:27017">]>):
+     7: 		<td>链接检测</td>
+     8: 		<td></td>
+     9: 	</tr>
+    10: <% @courses.each do |course| %>
+    11: 	<tr>
+    12: 		<td><%= course.cat %></td>
+    13: 		<td><%= course.title %></td>
+  app/views/courses/index.html.erb:10:in `_app_views_courses_index_html_erb___2731790002021938106_70236644032160'
+  app/controllers/courses_controller.rb:6:in `index'
+
+
+  Rendered /Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+  Rendered /Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /Users/aaaa/.rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.9ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+Processing by CoursesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 3.5660ms
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=courses selector={"$query"=>{}, "$orderby"=>{"released_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 22.2560ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"courses", :query=>{}} runtime: 0.3780ms
+  Rendered courses/index.html.erb within layouts/application (46.8ms)
+Completed 200 OK in 85ms (Views: 53.1ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/courses.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:25 +0800
+
+
+Started GET "/users/index" for 127.0.0.1 at 2013-12-20 13:08:27 +0800
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4630ms
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=users selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 1.2550ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"users", :query=>{}} runtime: 0.2720ms
+  Rendered users/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 10.8ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:08:28 +0800
+Processing by CoursesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5230ms
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=courses selector={"$query"=>{}, "$orderby"=>{"released_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 2.6280ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"courses", :query=>{}} runtime: 0.3450ms
+  Rendered courses/index.html.erb within layouts/application (14.6ms)
+Completed 200 OK in 22ms (Views: 20.7ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+Processing by CoursesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4980ms
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=courses selector={"$query"=>{}, "$orderby"=>{"released_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 2.3250ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"courses", :query=>{}} runtime: 0.4740ms
+  Rendered courses/index.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 23ms (Views: 21.9ms)
+
+
+Started GET "/assets/twitter/bootstrap.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/welcome.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/courses.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/welcome.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-20 13:08:36 +0800
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:08:38 +0800
+Processing by CoursesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5320ms
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=courses selector={"$query"=>{}, "$orderby"=>{"released_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 2.6500ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"courses", :query=>{}} runtime: 0.3040ms
+  Rendered courses/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 23ms (Views: 20.9ms)
+
+
+Started GET "/users/index" for 127.0.0.1 at 2013-12-20 13:08:39 +0800
+Processing by UsersController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.4330ms
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=users selector={"$query"=>{}, "$orderby"=>{"created_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 0.4430ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"users", :query=>{}} runtime: 0.2960ms
+  Rendered users/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 9.9ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:08:40 +0800
+Processing by CoursesController#index as HTML
+  MOPED: 127.0.0.1:27017 COMMAND      database=admin command={:ismaster=>1} runtime: 0.5240ms
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=courses selector={"$query"=>{}, "$orderby"=>{"released_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 32.4810ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"courses", :query=>{}} runtime: 0.5400ms
+  Rendered courses/index.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 56ms (Views: 53.8ms)
+
+
+Started GET "/courses/index" for 127.0.0.1 at 2013-12-20 13:08:41 +0800
+Processing by CoursesController#index as HTML
+  MOPED: 127.0.0.1:27017 QUERY        database=ziyue collection=courses selector={"$query"=>{}, "$orderby"=>{"released_at"=>-1}} flags=[] limit=20 skip=0 batch_size=nil fields=nil runtime: 2.7510ms
+  MOPED: 127.0.0.1:27017 COMMAND      database=ziyue command={:count=>"courses", :query=>{}} runtime: 0.4330ms
+  Rendered courses/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 22ms (Views: 20.4ms)
